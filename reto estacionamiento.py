@@ -2,7 +2,8 @@
 print("ESTACIONAMIENTO PLAYA")
 horas = int(input("Digite horas:  "))
 minutos = int(input("Digite minutos:  "))
-dia = str(input("Ingrese el día de la semana (sin tildes y en minuscula):   "))
+dia = str(input("Ingrese el día de la semana: ")).lower()
+
 fracciones = 0
 pago = 0
    
@@ -28,7 +29,8 @@ elif minutos> 5 and minutos <60: #Acá si pasa de 5 minutos, es decir, se cuenta
 if horas <0 or minutos <0:
          print("¡Error! El tiempo ingresado no es válido.")
          precio = 0
-         
+
+#Imprimir factura
 else:
     precio = (horas+fracciones)*pago
     print("\nFactura"+"\nHoras ocupadas: ",horas,"\nMinutos ocupados: ",minutos,"\nDía: ",dia,"\nTotal a pagar: ",precio)
